@@ -5,16 +5,16 @@
 
 // It should look something like this
 // let myObject = {
-//     name: {
-//         first: 'Scott',
-//         last: 'Morin',
-//     },
-//     age: '49',
-//     city: 'Montreal',
-//     siblings: 1,
-//     petName: 'Mia',
-//     monthOfBirth: 'July'
-// }
+//   name: {
+//     first: "Scott",
+//     last: "Morin",
+//   },
+//   age: "49",
+//   city: "Montreal",
+//   siblings: 1,
+//   petName: "Mia",
+//   monthOfBirth: "July",
+// };
 
 // A) console.log() your object.
 // B) console.log() a few of the values in the object.
@@ -32,10 +32,34 @@
 
 // HINT: You can just modify the object that you created before.
 
+let myProfile = {
+  Name: {
+    first: "ben",
+    last: "constant",
+  },
+  age: 32,
+  city: "montreal",
+  siblings: 0,
+  petName: "king",
+  monthOfBirth: "july",
+  dateOfBirth: 29,
+  favoriteTvShow: "mr.robot",
+  favoriteColor: "purple",
+};
+
+// function fullName(person) {
+//   let {firstName, middleName, lastName} = person.name
+//   let fullName = `${firstName} ` + `${lastName} `
+//   return fullName
+// }
+// console.log('test 1', fullName());
+console.log(`${myProfile.favoriteTvShow} ${myProfile.city}`);
+console.log(`${myProfile.siblings}`);
+console.log(`${myProfile.Name.first} ` + ` ${myProfile.Name.last}`);
 //-------------------------------------------------
 
 // Exercise B
-// ------------
+// ------------`
 // Look up your favorite movie on IMDB, and make an object that represents some
 // aspects of that movie, *e.g.*:
 //     - Title
@@ -47,7 +71,18 @@
 // HINT: Most movies have multiple actors. What data-structure do we use to
 // represent a collection of similar things?
 
-let favoriteMovie = {};
+let favoriteMovie = {
+  Title: "Extraction",
+  Director: "Sam Hargrave",
+  YearReleased: 2020,
+  Rating: 6.8,
+  Actors: {
+    actor1: "Chris Hemsworth",
+    actor2: "Rudhraksh Jaiswal",
+    actor3: "Randeep Hooda",
+  },
+};
+console.log(`${favoriteMovie.Actors.actor1}`);
 
 //-------------------------------------------------
 
@@ -55,16 +90,18 @@ let favoriteMovie = {};
 // ------------
 // Fix the attempts to access values in the `person` object:
 
-const key = 'name';
+const key = "name";
 const person = {
-  name: 'Alyssa P. Hacker',
+  name: "Alyssa P. Hacker",
   age: 26,
-  hometown: 'somewhere',
+  hometown: "somewhere",
 };
 
-person[age]; // => 26
-person.key; // => "Alyssa P. Hacker"
+person.age; // => 26
+person.name; // => "Alyssa P. Hacker"
 
+console.log(`${person.name}`);
+console.log(`${person.age}`);
 //-------------------------------------------------
 
 // Exercise D
@@ -77,15 +114,17 @@ person.key; // => "Alyssa P. Hacker"
 // Example
 const alyssa = {
   name: {
-    first: 'Alyssa',
-    middle: 'P.',
-    last: 'Hacker',
+    first: "Alyssa",
+    middle: "P.",
+    last: "Hacker",
   },
   age: 26,
 };
 
 function fullName(person) {
   // Your code here
+  let { first, middle, last } = person.name;
+  return person.name;
 }
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
@@ -102,14 +141,16 @@ console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
 
 const rick = {
   name: {
-    first: 'Rick',
-    last: 'Sanchez',
+    first: "Rick",
+    last: "Sanchez",
   },
   age: 66,
 };
 
 function betterFullName(person) {
   // Your code here
+  let { first, middle, last } = person.name;
+  return person.name;
 }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"

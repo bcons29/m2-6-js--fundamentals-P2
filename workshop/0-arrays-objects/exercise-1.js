@@ -4,16 +4,21 @@
 // source: https://www.insider.com/most-popular-foods-grubhub-2018-12
 
 let mostPopularFood = [
-  'poke bowl',
-  'chicken sliders',
-  'pork baby back ribs',
-  'chicken burritos',
-  'chicken sandwich',
-  'cauliflower rice bowl',
-  'chicken and waffle sliders',
-  'parmesan chicken',
+  "poke bowl",
+  "chicken sliders",
+  "pork baby back ribs",
+  "chicken burritos",
+  "chicken sandwich",
+  "cauliflower rice bowl",
+  "chicken and waffle sliders",
+  "parmesan chicken",
   undefined,
 ];
+
+mostPopularFood.unshift("bean burritos");
+mostPopularFood.push("buffalo-flavored cauliflower");
+
+console.log(mostPopularFood);
 
 // The array holds a top-ten list of foods as ranked by Grubhub.
 // #1 and #10 are missing

@@ -2,12 +2,12 @@
 // below is an example of an array of objects, where each object represents a person:
 
 const people = [
-  { name: { first: 'Alyssa', middle: 'P.', last: 'Hacker' }, age: 26 },
-  { name: { first: 'Ben', last: 'Bitdiddle' }, age: 34 },
-  { name: { first: 'Eva', middle: 'Lu', last: 'Ator' }, age: 40 },
-  { name: { first: 'Lem', middle: 'E.', last: 'Tweakit' }, age: 45 },
-  { name: { first: 'Louis', last: 'Reasoner' }, age: 21 },
-  { name: { first: 'Shahan', middle: 'Haig', last: 'Krakirian' }, age: 21 },
+  { name: { first: "Alyssa", middle: "P.", last: "Hacker" }, age: 26 },
+  { name: { first: "Ben", last: "Bitdiddle" }, age: 34 },
+  { name: { first: "Eva", middle: "Lu", last: "Ator" }, age: 40 },
+  { name: { first: "Lem", middle: "E.", last: "Tweakit" }, age: 45 },
+  { name: { first: "Louis", last: "Reasoner" }, age: 21 },
+  { name: { first: "Shahan", middle: "Haig", last: "Krakirian" }, age: 21 },
 ];
 
 // Exercise 5.0
@@ -16,17 +16,36 @@ const people = [
 // `name` key does not have the same "shape" as the ones above, make sure you
 // change it to look like these).
 
+people.unshift({
+  name: { first: "John", middle: "L", last: "Camino" },
+  age: 33,
+});
+
+console.log(Object.keys(people));
+console.log(people[0].name);
+console.log(
+  `${people[0].name.first}` +
+    ` ${people[0].name.middle}` +
+    ` ${people[0].name.last}`
+);
+
 //-------------------------------------------------
 
 // Exercise 5.1
 // ------------
 // Write a function that returns the average age of the `people` array.
-
 function avgAge(peopleArr) {
-  // Yuor code here
+  // Your code here
+  let totalAges = 0;
+  const numOfAges = peopleArr.length;
+
+  peopleArr.forEach((person) => {
+    totalAges += person.age;
+  });
+  return totalAges / numOfAges;
 }
 
-console.log(`Average age is ${avgAge(people)}.`);
+console.log(`${avgAge(people)}`);
 
 //-------------------------------------------------
 

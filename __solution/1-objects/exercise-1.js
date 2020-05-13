@@ -48,11 +48,11 @@
 // represent a collection of similar things?
 
 let favoriteMovie = {
-  title: 'Forrest Gump',
-  director: 'Robert Zemeckis',
+  title: "Forrest Gump",
+  director: "Robert Zemeckis",
   yearReleased: 1994,
-  ratings: '8.8/10',
-  actors: ['Tom Hanks', 'Robin Wright', 'Gary Sinise'],
+  ratings: "8.8/10",
+  actors: ["Tom Hanks", "Robin Wright", "Gary Sinise"],
 };
 
 //-------------------------------------------------
@@ -61,15 +61,15 @@ let favoriteMovie = {
 // ------------
 // Fix the attempts to access values in the `person` object:
 
-const key = 'name';
+const key = "name";
 const person = {
-  name: 'Alyssa P. Hacker',
+  name: "Alyssa P. Hacker",
   age: 26,
-  hometown: 'somewhere',
+  hometown: "somewhere",
 };
 
 console.log(person.age); // => 26
-console.log(person['name']); // => "Alyssa P. Hacker"
+console.log(person["name"]); // => "Alyssa P. Hacker"
 
 //-------------------------------------------------
 
@@ -83,9 +83,9 @@ console.log(person['name']); // => "Alyssa P. Hacker"
 // Example
 const alyssa = {
   name: {
-    first: 'Alyssa',
-    middle: 'P.',
-    last: 'Hacker',
+    first: "Alyssa",
+    middle: "P.",
+    last: "Hacker",
   },
   age: 26,
 };
@@ -109,8 +109,8 @@ console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
 
 const rick = {
   name: {
-    first: 'Rick',
-    last: 'Sanchez',
+    first: "Rick",
+    last: "Sanchez",
   },
   age: 66,
 };
@@ -119,9 +119,9 @@ function betterFullName(person) {
   // Your code here
   let nameArray = [person.name.first, person.name.middle, person.name.last];
 
-  nameArray = nameArray.filter((name) => typeof name === 'string');
+  nameArray = nameArray.filter((name) => typeof name === "string");
 
-  return nameArray.join(' ');
+  return nameArray.join(" ");
 }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"
